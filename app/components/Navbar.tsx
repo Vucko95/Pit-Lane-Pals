@@ -8,7 +8,7 @@ export const Navbar = () => {
     return (
         <div className="fixed w-full  z-50 flex justify-between items-center bg-secondary py-2 px-4 border-b-2 h-16">
             <Link href="/">
-            <h1 className=" hidden md:block text-2xl ">AI BRO</h1>
+            <h1 className=" hidden md:block text-2xl ">Pit Lane Pals</h1>
             </Link>
             <div className="flex items-center">
                 <MobileSidebar/>

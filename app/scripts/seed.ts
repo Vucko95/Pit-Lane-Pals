@@ -6,9 +6,12 @@ async function main() {
   try {
     await db.category.createMany({
       data: [
-        { name: 'F1 Driver' },
-        { name: 'F1 Team Principal' },
-        { name: 'F1 Latifi Fan' },
+        { name: 'Drivers' },
+        { name: 'Team Principals' },
+        { name: 'All-Stars' },
+        { name: 'Famous Persons' },
+        { name: 'Fans' },
+        { name: 'Bots' },
       ],
     });
   } catch (error) {
