@@ -1,4 +1,3 @@
-import {SearchInput} from "@/app/components/search-input"
 import {prismadb} from "@/app/lib/prismadb"
 import { Categories } from "@/app/components/categories";
 import { Companions } from "@/app/components/companions";
@@ -38,9 +37,12 @@ const RootPage =async ({
 
   return (
     <div className="h-full p-4 space-y-2">
-      <SearchInput />
-      <Categories data={categories} />
-      <Companions data={data} />
+      <div className="flex flex-wrap  justify-center items-center h-full">
+        <div className="md:w-4/5 w-full">
+          <Categories data={categories} />
+          <Companions data={data} />
+        </div>
+      </div>
     </div>
   )
 }

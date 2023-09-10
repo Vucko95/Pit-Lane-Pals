@@ -34,7 +34,7 @@ interface CompanionsProps {
     }
 
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 pb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 pb-10">
           {data.map((item) => (
             <Card key={item.name} className="bg-primary/10 rounded-xl cursor-pointer hover:opacity-75 transition border-0">
               <Link href={`/chat/${item.id}`}>
@@ -46,6 +46,14 @@ interface CompanionsProps {
                       className="rounded-xl object-cover"
                       alt="Character"
                     /> */}
+                      {/* // src={"/formulinho.png"} */}
+                      <Image
+                      src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2043&q=80"
+                      alt="Description of the image"
+                      // width={20}
+                      fill
+                      // height={20}
+                    />
                   </div>
                   <p className="font-bold">
                     {item.name}

@@ -16,7 +16,7 @@ import { Sidebar } from "@/app/components/sidebar"
                 <Menu />
             </SheetTrigger>
             <SheetContent side="left" className="p-0 bg-secondary pt-10">
-                <Sidebar/>
+                {/* <Sidebar/> */}
             </SheetContent>
             </Sheet>
 
