@@ -46,9 +46,9 @@ const formSchema = z.object({
   seed: z.string().min(200, {
     message: "Seed requires at least 200 characters."
   }),
-  // src: z.string().min(1, {
-  //   message: "Image is required."
-  // }),
+  src: z.string().min(1, {
+    message: "Image is required."
+  }),
   categoryId: z.string().min(1, {
     message: "Category is required",
   }),
@@ -71,9 +71,9 @@ export const CompanionForm = ({
     defaultValues: initialData || {
       name: "",
       description: "",
+      src: "",
       instructions: "",
       seed: "",
-      // src: "",
       categoryId: undefined,
     },
   });
@@ -182,6 +182,22 @@ export const CompanionForm = ({
                   </Select>
                   <FormDescription>
                     Select a category for your AI
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              name="src"
+              control={form.control}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Image Link</FormLabel>
+                  <FormControl>
+                    <Input disabled={isLoading} placeholder="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2043&q=80" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    Copy Image Link from Unslpash
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

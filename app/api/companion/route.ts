@@ -12,7 +12,7 @@ export async function POST(req: Request)
       id: "1",
       firstName: "TestUser", 
     };
-    const {  name, description, instructions, seed, categoryId } = body;
+    const {src,  name, description, instructions, seed, categoryId } = body;
 
     // if (!params.companionId) {
     //   return new NextResponse("Companion ID required", { status: 400 });
@@ -38,6 +38,7 @@ export async function POST(req: Request)
         userId: user.id,
         userName: user.firstName,
         name,
+        src,
         description,
         instructions,
         seed,

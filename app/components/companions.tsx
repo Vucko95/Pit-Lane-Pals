@@ -17,16 +17,9 @@ interface CompanionsProps {
   }: CompanionsProps) => {
     if (data.length === 0) {
       return (
-        <div className="pt-10 flex flex-col items-center justify-center space-y-3">
+        <div className="pt-5 flex flex-col items-center justify-center space-y-3">
           <div className="relative w-60 h-60">
-          {/* <Image src={`/empty.png`} alt="something" height={150} width={200}/> */}
-
-            <Image
-              fill
-              className="grayscale"
-              src="/empty.png"
-              alt="Empty"
-            />
+            <Image fill className="grayscale" src="/empty.png" alt="Empty" />
           </div>
           <p className="text-sm text-muted-foreground">No companions found.</p>
         </div>
@@ -39,7 +32,7 @@ interface CompanionsProps {
             <Card key={item.name} className="bg-primary/10 rounded-xl cursor-pointer hover:opacity-75 transition border-0">
               <Link href={`/chat/${item.id}`}>
                 <CardHeader className="flex items-center justify-center text-center text-muted-foreground">
-                  <div className="relative w-32 h-32">
+                  <div className="relative w-40 h-32">
                     {/* <Image
                       src={item.src}
                       fill
@@ -48,11 +41,10 @@ interface CompanionsProps {
                     /> */}
                       {/* // src={"/formulinho.png"} */}
                       <Image
-                      src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2043&q=80"
+                      src={item.src}
+                      className="rounded-xl object-cover"
                       alt="Description of the image"
-                      // width={20}
                       fill
-                      // height={20}
                     />
                   </div>
                   <p className="font-bold">
