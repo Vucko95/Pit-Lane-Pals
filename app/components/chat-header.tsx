@@ -56,12 +56,13 @@ export const ChatHeader = ({
           <ChevronLeft className="h-8 w-8" />
         </Button>
         <Image
-              width={64}
-              height={64}
-              src="/cat.jpg"
+              width={84}
+              height={84}
+              src={companion.src}
               alt="base"
+              style={{ borderRadius: '30%' }}
+
             />
-        {/* <BotAvatar src={companion.src} /> */}
         <div className="flex flex-col gap-y-1">
           <div className="flex items-center gap-x-2">
             <p className="font-bold">{companion.name}</p>
