@@ -32,14 +32,7 @@ interface CompanionsProps {
             <Card key={item.name} className="bg-primary/10 rounded-xl cursor-pointer hover:opacity-75 transition border-0">
               <Link href={`/chat/${item.id}`}>
                 <CardHeader className="flex items-center justify-center text-center text-muted-foreground">
-                  <div className="relative w-40 h-32">
-                    {/* <Image
-                      src={item.src}
-                      fill
-                      className="rounded-xl object-cover"
-                      alt="Character"
-                    /> */}
-                      {/* // src={"/formulinho.png"} */}
+                  <div className="relative md:w-40 md:h-32 w-20 h-40 ">
                       <Image
                       src={item.src}
                       className="rounded-xl object-cover"

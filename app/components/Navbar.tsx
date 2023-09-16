@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 import {MobileSidebar} from "@/app/components/mobile-sidebar"
 export const Navbar = () => {
     return (
-        <div className="fixed w-full z-50">
+        <div className="w-full z-50">
             <div className="flex justify-center items-center py-2 px-4 border-b-2 h-16">
                 <Link href="/">
                     <div className="flex items-center">
